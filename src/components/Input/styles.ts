@@ -20,4 +20,8 @@ export const StyledInput = styled.input`
   padding-left: 8px;
   font-size: 16px;
   color: ${({ theme }) => theme.PLACEHOLDER};
+
+  &::placeholder {
+    color: ${({ theme }) => theme.PLACEHOLDER};
+  }
 `;
