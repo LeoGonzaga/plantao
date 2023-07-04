@@ -63,7 +63,7 @@ export default class ApplicationDocument extends Document<Props> {
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@300;500&display=swap"
             rel="stylesheet"
           />
           {this.props.styleTags}
