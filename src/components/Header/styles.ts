@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.BACKGROUND};
-  height: 144px;
+  height: 148px;
 
   display: flex;
   flex-direction: column;
