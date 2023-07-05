@@ -10,8 +10,8 @@ export const NAMES = {
 export const PHARMACYS = [
   {
     name: NAMES.ECONOMIZE,
-    address: 'R. Pedro Monti, 205, Centro. Pedralva',
-    contact: '35 9 9877-2222',
+    address: 'R. Pedro Monti, 205, Centro, Pedralva',
+    contact: '35 9 9877-6285',
     isOpen: false,
   },
   {
@@ -29,7 +29,7 @@ export const PHARMACYS = [
   {
     name: NAMES.SANTA_BRANCA,
     address: 'R. Xavier Lisboa, 92, Centro, Pedralva',
-    contact: '35 9 9911-2300',
+    contact: '35 9 9818-7726',
     isOpen: false,
   },
   {
