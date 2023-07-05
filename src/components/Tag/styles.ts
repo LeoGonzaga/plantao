@@ -4,9 +4,19 @@ export const Container = styled.div`
   color: #3a7f0d;
   font-size: 12px;
   font-family: Inter;
-
   display: flex;
-  gap: 4px;
+  justify-content: space-between;
+  > div {
+    display: flex;
+    gap: 4px;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    padding: 0px 10px;
+    outline: none;
+  }
 `;
 
 export const Online = styled.div`

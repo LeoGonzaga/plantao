@@ -2,6 +2,7 @@ import React from 'react';
 
 import Card from '@/components/Card';
 import Header from '@/components/Header';
+import { PHARMACYS } from '@/constants/pharmacy ';
 
 import * as SC from './styles';
 
@@ -10,11 +11,9 @@ export const Home = (): JSX.Element => {
     <div>
       <Header />
       <SC.Container>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {PHARMACYS.map((pharmacy) => (
+          <Card key={pharmacy.name} {...pharmacy} />
+        ))}
       </SC.Container>
     </div>
   );

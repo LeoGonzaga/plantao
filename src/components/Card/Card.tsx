@@ -8,16 +8,22 @@ import Tag from '../Tag';
 import Title from '../Title';
 import * as SC from './styles';
 
-export const Card = (): JSX.Element => {
+interface ICard {
+  name: string;
+  address: string;
+  contact: string;
+}
+
+export const Card = ({ address, contact, name }: ICard): JSX.Element => {
   return (
     <SC.Container>
       <div>
         <Image src={BLOB1} alt="" />
       </div>
       <div>
-        <Tag />
-        <Title />
-        <Address />
+        <Tag value={contact} />
+        <Title value={name} />
+        <Address value={address} />
       </div>
     </SC.Container>
   );
