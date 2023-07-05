@@ -1,9 +1,14 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div<{ isOpen: boolean }>`
   display: flex;
   align-items: center;
   gap: 12px;
   border-radius: 8px;
-  /* opacity: 0.2; */
+  ${({ isOpen }) =>
+    !isOpen &&
+    css`
+      opacity: 0.2;
+      cursor: not-allowed;
+    `}
 `;

@@ -6,12 +6,19 @@ import Router from 'next/router';
 import * as SC from './styles';
 interface ITag {
   value: string;
+  isOpen: boolean;
 }
 
 const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=`;
 const MESSAGE = `&text=Olá!`;
 
-export const Tag = ({ value }: ITag): JSX.Element => {
+const CLOSED = 19;
+const hour = new Date().getHours();
+const beforeHours = hour <= CLOSED;
+
+export const Tag = ({ value, isOpen }: ITag): JSX.Element => {
+  const iS_OPEN = isOpen && beforeHours;
+
   const handleClick = () => {
     const phoneClean = value.replace(/[^\w]/g, '');
     const LINK = WHATSAPP_URL + phoneClean + MESSAGE;
@@ -19,15 +26,17 @@ export const Tag = ({ value }: ITag): JSX.Element => {
   };
 
   return (
-    <SC.Container>
+    <SC.Container isOpen={iS_OPEN}>
       <div>
-        <SC.Online />
-        Aberto agora
+        <SC.Online isOpen={iS_OPEN} />
+        {iS_OPEN ? 'Aberto' : 'Fechado'} agora
       </div>
 
-      <button onClick={handleClick}>
-        <BiSolidPhoneCall size={20} color="#000" />
-      </button>
+      {iS_OPEN && (
+        <button onClick={handleClick}>
+          <BiSolidPhoneCall size={20} color="#000" />
+        </button>
+      )}
     </SC.Container>
   );
 };

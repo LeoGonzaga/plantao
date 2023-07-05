@@ -12,16 +12,22 @@ interface ICard {
   name: string;
   address: string;
   contact: string;
+  isOpen: boolean;
 }
 
-export const Card = ({ address, contact, name }: ICard): JSX.Element => {
+export const Card = ({
+  address,
+  contact,
+  name,
+  isOpen,
+}: ICard): JSX.Element => {
   return (
-    <SC.Container>
+    <SC.Container isOpen={isOpen}>
       <div>
         <Image src={BLOB1} alt="" />
       </div>
       <div>
-        <Tag value={contact} />
+        <Tag value={contact} isOpen={isOpen} />
         <Title value={name} />
         <Address value={address} />
       </div>
