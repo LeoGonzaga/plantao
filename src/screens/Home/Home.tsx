@@ -10,6 +10,7 @@ export const Home = (): JSX.Element => {
   return (
     <div>
       <Header />
+
       <SC.Container>
         {PHARMACYS.map((pharmacy) => (
           <Card key={pharmacy.name} {...pharmacy} />

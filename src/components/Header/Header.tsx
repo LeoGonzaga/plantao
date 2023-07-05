@@ -11,7 +11,11 @@ export const Header = (): JSX.Element => {
     <SC.Container>
       <Background />
       <Logo />
-      <Input />
+      <SC.Description>
+        Uma solução prática e eficiente para encontrar farmácias que estão de
+        plantão aos finais de semana.
+      </SC.Description>
+      {/* <Input /> */}
     </SC.Container>
   );
 };

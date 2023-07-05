@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.BACKGROUND};
-  height: 148px;
+  height: 180px;
 
   display: flex;
   flex-direction: column;
@@ -10,4 +10,11 @@ export const Container = styled.div`
   justify-content: center;
 
   position: relative;
+`;
+
+export const Description = styled.p`
+  font-size: 12px;
+  font-family: Inter;
+  color: #fff;
+  padding: 0px 20px;
 `;
