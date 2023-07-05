@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import Document, {
   DocumentContext,
@@ -7,10 +7,10 @@ import Document, {
   Html,
   Main,
   NextScript,
-} from "next/document";
-import { ServerStyleSheet } from "styled-components";
+} from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
-const language = "pt-br";
+const language = 'pt-br';
 
 type Props = {
   styleTags: string;

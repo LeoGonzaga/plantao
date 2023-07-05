@@ -1,5 +1,6 @@
-import React from "react";
-import * as SC from "./styles";
+import React from 'react';
+
+import * as SC from './styles';
 
 export const Background = (): JSX.Element => {
   return (

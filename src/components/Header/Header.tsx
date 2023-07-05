@@ -1,9 +1,10 @@
-import React from "react";
-import Logo from "../Logo";
-import Background from "@/components/Background";
-import Input from "@/components/Input";
+import React from 'react';
 
-import * as SC from "./styles";
+import Background from '@/components/Background';
+import Input from '@/components/Input';
+
+import Logo from '../Logo';
+import * as SC from './styles';
 
 export const Header = (): JSX.Element => {
   return (

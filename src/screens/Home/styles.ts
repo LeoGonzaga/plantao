@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   padding: 40px 20px;
-
+  scroll-behavior: smooth;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   height: 80vh;

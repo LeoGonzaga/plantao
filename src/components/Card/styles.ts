@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -7,4 +7,5 @@ export const Container = styled.div`
   width: fit-content;
   padding: 10px;
   border-radius: 8px;
+  /* opacity: 0.2; */
 `;

@@ -1,8 +1,9 @@
-import React from "react";
-import * as SC from "./styles";
+import React from 'react';
 
-import LOGO from "../../../assets/logo.png";
-import Image from "next/image";
+import Image from 'next/image';
+
+import LOGO from '../../../assets/logo.png';
+import * as SC from './styles';
 
 export const Logo = (): JSX.Element => {
   return (

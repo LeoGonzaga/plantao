@@ -1,8 +1,9 @@
-import React from "react";
-import Header from "@/components/Header";
-import Card from "@/components/Card";
+import React from 'react';
 
-import * as SC from "./styles";
+import Card from '@/components/Card';
+import Header from '@/components/Header';
+
+import * as SC from './styles';
 
 export const Home = (): JSX.Element => {
   return (

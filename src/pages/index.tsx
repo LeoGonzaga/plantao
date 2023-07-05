@@ -1,5 +1,5 @@
-import Head from "next/head";
-import Home from "@/screens/Home";
+import Home from '@/screens/Home';
+import Head from 'next/head';
 
 export default function HomePage() {
   return (
