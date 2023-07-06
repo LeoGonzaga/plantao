@@ -91,7 +91,6 @@ export const Home = (): JSX.Element => {
   return (
     <div>
       <Header />
-
       <SC.Container>
         {isLoading && <LOADING />}
 
