@@ -13,8 +13,9 @@ const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=`;
 const MESSAGE = `&text=Olá!`;
 
 const CLOSED = 19;
+const OPENDED = 8;
 const hour = new Date().getHours();
-const beforeHours = hour < CLOSED;
+const beforeHours = hour < CLOSED && hour >= OPENDED;
 
 export const Tag = ({ value, isOpen }: ITag): JSX.Element => {
   const iS_OPEN = isOpen && beforeHours;
