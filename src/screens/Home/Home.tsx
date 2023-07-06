@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 import Card from '@/components/Card';
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { PHARMACYS } from '@/constants/pharmacy ';
 import { SCHEDULING } from '@/constants/scheduling';
@@ -23,8 +24,23 @@ export interface IIsOpened {
   isOpen: boolean;
 }
 
+const LOADING = () => (
+  <>
+    <SC.SSkeletonLine />
+    <SC.SSkeletonLine />
+    <SC.SSkeletonLine />
+    <SC.SSkeletonLine />
+    <SC.SSkeletonLine />
+    <SC.SSkeletonLine />
+    <SC.SSkeletonLine />
+    <SC.SSkeletonLine />
+    <SC.SSkeletonLine />
+  </>
+);
+
 export const Home = (): JSX.Element => {
   const [selectedPharmacy, setSelectedPharmacy] = useState<IIsOpened[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const checkIsWeeked = () => {
     return weekend === SATURDAY || weekend === SUNDAY;
@@ -58,11 +74,14 @@ export const Home = (): JSX.Element => {
     const isWeeked = checkIsWeeked();
     if (isWeeked) {
       getOpenedInWeeked();
+      setIsLoading(false);
+
       return;
     }
 
     const allItems = activeAllPharmacys();
     setSelectedPharmacy(allItems);
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -74,10 +93,14 @@ export const Home = (): JSX.Element => {
       <Header />
 
       <SC.Container>
-        {selectedPharmacy.map((pharmacy) => (
-          <Card key={pharmacy.name} {...pharmacy} />
-        ))}
+        {isLoading && <LOADING />}
+
+        {!isLoading &&
+          selectedPharmacy.map((pharmacy) => (
+            <Card key={pharmacy.name} {...pharmacy} />
+          ))}
       </SC.Container>
+      <Footer />
     </div>
   );
 };

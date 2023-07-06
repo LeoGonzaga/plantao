@@ -19,6 +19,7 @@ const beforeHours = hour < CLOSED && hour >= OPENDED;
 
 export const Tag = ({ value, isOpen }: ITag): JSX.Element => {
   const iS_OPEN = isOpen && beforeHours;
+
   const handleClick = () => {
     const phoneClean = value.replace(/[^\w]/g, '');
     const LINK = WHATSAPP_URL + phoneClean + MESSAGE;
