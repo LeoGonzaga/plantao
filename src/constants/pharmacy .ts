@@ -5,6 +5,7 @@ export const NAMES = {
   SANTA_BRANCA: 'Santa Branca',
   FERREIRA: 'Ferreira',
   PEDRALFARMA: 'PedralFarma',
+  BENESSERE: 'BENESSERE',
 };
 
 export const PHARMACYS = [
@@ -17,7 +18,7 @@ export const PHARMACYS = [
   {
     name: NAMES.SAO_JOSE,
     address: 'R. Padre Marino, 441, São José, Pedralva',
-    contact: '35 9 9818-7726',
+    contact: '35 9 9917-3382',
     isOpen: false,
   },
   {
@@ -33,9 +34,9 @@ export const PHARMACYS = [
     isOpen: false,
   },
   {
-    name: NAMES.FERREIRA,
+    name: NAMES.BENESSERE,
     address: 'R. Cel. Canúto, 229, Centro, Pedralva',
-    contact: '35 9 9985-1670',
+    contact: '35 9 9145-6093',
     isOpen: false,
   },
   {
