@@ -5,7 +5,7 @@ export const NAMES = {
   SANTA_BRANCA: 'Santa Branca',
   FERREIRA: 'Ferreira',
   PEDRALFARMA: 'PedralFarma',
-  BENESSERE: 'BENESSERE',
+  BENESSERE: 'Benessere',
 };
 
 export const PHARMACYS = [
